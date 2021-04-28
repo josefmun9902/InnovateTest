@@ -1,6 +1,6 @@
 ### General project setup
 general:
-  gitHttpsCredentialsId: 'trainer-git'
+  gitHttpsCredentialsId: 'innogit'
   buildTool: 'mta'
   productiveBranch: 'master'
   verbose: true
