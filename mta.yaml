@@ -1,0 +1,94 @@
+_schema-version: "3.2"
+ID: sap-btp-project1
+description: Innovator Challenge 2021
+version: 0.0.1
+modules:
+- name: sap-btp-project1-dest-content
+  type: com.sap.application.content
+  requires:
+  - name: sap-btp-project1-dest-srv
+    parameters:
+      content-target: true
+  - name: sap-btp-project1-repo-host
+    parameters:
+      service-key:
+        name: sap-btp-project1-repo-host-key
+  - name: sap-btp-project1-uaa
+    parameters:
+      service-key:
+        name: sap-btp-project1-uaa-key
+  parameters:
+    content:
+      instance:
+        destinations:
+        - Name: sap-btp-project1_repo_host
+          ServiceInstanceName: sap-btp-project1-html5-srv
+          ServiceKeyName: sap-btp-project1-repo-host-key
+          sap.cloud.service: sap-btp-project1
+        - Authentication: OAuth2UserTokenExchange
+          Name: sap-btp-project1_uaa
+          ServiceInstanceName: sap-btp-project1-xsuaa-srv
+          ServiceKeyName: sap-btp-project1-uaa-key
+          sap.cloud.service: sap-btp-project1
+        existing_destinations_policy: ignore
+  build-parameters:
+    no-source: true
+- name: sap-btp-project1-app-content
+  type: com.sap.application.content
+  path: .
+  requires:
+  - name: sap-btp-project1-repo-host
+    parameters:
+      content-target: true
+  build-parameters:
+    build-result: resources
+    requires:
+    - artifacts:
+      - sapbtpproject1.zip
+      name: sapbtpproject1
+      target-path: resources/
+- name: sapbtpproject1
+  type: html5
+  path: .
+  build-parameters:
+    build-result: dist
+    builder: custom
+    commands:
+    - npm install
+    - npm run build:cf
+    supported-platforms: []
+resources:
+- name: sap-btp-project1-dest-srv
+  type: org.cloudfoundry.managed-service
+  parameters:
+    config:
+      HTML5Runtime_enabled: true
+      init_data:
+        instance:
+          destinations:
+          - Authentication: NoAuthentication
+            Name: ui5
+            ProxyType: Internet
+            Type: HTTP
+            URL: https://ui5.sap.com
+          existing_destinations_policy: update
+      version: 1.0.0
+    service: destination
+    service-name: sap-btp-project1-dest-srv
+    service-plan: lite
+- name: sap-btp-project1-uaa
+  type: org.cloudfoundry.managed-service
+  parameters:
+    path: ./xs-security.json
+    service: xsuaa
+    service-name: sap-btp-project1-xsuaa-srv
+    service-plan: application
+- name: sap-btp-project1-repo-host
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: html5-apps-repo
+    service-name: sap-btp-project1-html5-srv
+    service-plan: app-host
+parameters:
+  deploy_mode: html5-repo
+  enable-parallel-deployments: true
