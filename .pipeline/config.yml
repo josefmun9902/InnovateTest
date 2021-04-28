@@ -1,10 +1,9 @@
 ### General project setup
 general:
-  gitSshKeyCredentialsId: 'trainer-git'
   buildTool: 'mta'
   productiveBranch: 'master'
   verbose: true
-  
+
 ### Step-specific configuration
 steps:
   cloudFoundryDeploy:
@@ -15,8 +14,8 @@ steps:
 
 ### Stage-specific configuration
 stages:
-  'Init':
-    artifactPrepareVersion: false
+  #'Init':
+    #artifactPrepareVersion: false
   'Central Build':
     buildExecute : true
   'Confirm':
