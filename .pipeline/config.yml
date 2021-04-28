@@ -1,0 +1,11 @@
+general:
+  buildTool: 'mta'
+
+### Stage-specific configuration
+stages:
+  productionDeployment:
+    cfTargets:
+      - org: 'ic-adv-dev-cf'
+        space: 'Dev - CI/CD Trainer'
+        apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com'
+        credentialsId: 'trainer-cf'
