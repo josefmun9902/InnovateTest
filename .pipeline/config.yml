@@ -1,12 +1,25 @@
+### General project setup
 general:
-  buildTool: 'mta'
   gitSshKeyCredentialsId: 'trainer-git'
+  buildTool: 'mta'
+  productiveBranch: 'master'
+  verbose: true
+  
+### Step-specific configuration
+steps:
+  cloudFoundryDeploy:
+    cloudFoundry:
+      org: 'ic-adv-dev'
+      space: 'Dev - CI/CD Trainer'
+      credentialsId: 'trainer-cf'
 
 ### Stage-specific configuration
 stages:
-  productionDeployment:
-    cfTargets:
-      - org: 'ic-adv-dev-cf'
-        space: 'Dev - CI/CD Trainer'
-        apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com'
-        credentialsId: 'trainer-cf'
+  'Init':
+    artifactPrepareVersion: false
+  'Central Build':
+    buildExecute : true
+  'Confirm':
+    manualConfirmation: false
+  'Release':
+    cloudFoundryDeploy: true
