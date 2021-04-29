@@ -1,6 +1,6 @@
 ### General project setup
 general:
-  gitSshKeyCredentialsId: 'MyGitSshCredentialsId'
+  gitHttpsCredentialsId: 'trainer-git'
   buildTool: 'mta'
   productiveBranch: 'master'
   verbose: true
