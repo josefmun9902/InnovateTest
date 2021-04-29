@@ -12,6 +12,10 @@ steps:
       org: 'ic-adv-dev'
       space: 'Dev - CI/CD Trainer'
       credentialsId: 'trainer-cf'
+  artifactPrepareVersion:
+    buildTool: mta
+    includeCommitId: false
+    versioningType: library
 
 ### Stage-specific configuration
 stages:
