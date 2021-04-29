@@ -1,6 +1,7 @@
 ### General project setup
 general:
-  gitHttpsCredentialsId: 'innogit'
+  gitHttpsCredentialsId: 'trainer-git'
+  gitSshKeyCredentialsId: 'MyGitSshCredentialsId'
   buildTool: 'mta'
   productiveBranch: 'master'
   verbose: true
