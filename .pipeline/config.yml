@@ -15,7 +15,7 @@ steps:
   artifactPrepareVersion:
     buildTool: mta
     includeCommitId: false
-    versioningType: library
+    versioningType: cloud
 
 ### Stage-specific configuration
 stages:
