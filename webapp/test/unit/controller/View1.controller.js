@@ -1,7 +1,7 @@
 /*global QUnit*/
 
 sap.ui.define([
-	"sapbtp./project1/controller/View1.controller"
+	"sapbtp./innovatorchallenge2021trainer/controller/View1.controller"
 ], function (Controller) {
 	"use strict";
 

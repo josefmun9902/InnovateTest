@@ -5,7 +5,7 @@ sap.ui.getCore().attachInit(function () {
 	"use strict";
 
 	sap.ui.require([
-		"sapbtp./project1/test/unit/AllTests"
+		"sapbtp./innovatorchallenge2021trainer/test/unit/AllTests"
 	], function () {
 		QUnit.start();
 	});

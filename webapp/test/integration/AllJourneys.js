@@ -7,7 +7,7 @@ sap.ui.define([
 
 	Opa5.extendConfig({
 		arrangements: new Startup(),
-		viewNamespace: "sap.btp.project1.view.",
+		viewNamespace: "sap.btp.innovatorchallenge2021trainer.view.",
 		autoWait: true
 	});
 });

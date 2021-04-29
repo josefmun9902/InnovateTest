@@ -8,14 +8,14 @@
 |**Floorplan Used**<br>simple|
 |**Service Type**<br>OData Url|
 |**Service URL**<br>https://services.odata.org/V2/Northwind/Northwind.svc/
-|**Module Name**<br>project1|
+|**Module Name**<br>innovatorchallenge2021trainer|
 |**Application Title**<br>Innovator Challenge 2021|
 |**Namespace**<br>sap.btp|
 |**UI5 Theme**<br>sap_fiori_3|
 |**UI5 Version**<br>Latest|
 |**Enable Telemetry**<br>True|
 
-## project1
+## innovatorchallenge2021trainer
 
 Innovator Challenge 2021
 

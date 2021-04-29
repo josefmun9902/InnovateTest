@@ -1,5 +1,5 @@
 <mvc:View
-    controllerName="sap.btp.project1.controller.View1"
+    controllerName="sap.btp.innovatorchallenge2021trainer.controller.View1"
     xmlns:mvc="sap.ui.core.mvc"
     displayBlock="true"
     xmlns="sap.m"

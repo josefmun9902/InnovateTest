@@ -3,7 +3,7 @@ sap.ui.define([
 ], function (Opa5) {
 	"use strict";
 
-	return Opa5.extend("sap.btp.project1.test.integration.arrangements.Startup", {
+	return Opa5.extend("sap.btp.innovatorchallenge2021trainer.test.integration.arrangements.Startup", {
 
 		iStartMyApp: function (oOptionsParameter) {
 			var oOptions = oOptionsParameter || {};
@@ -14,7 +14,7 @@ sap.ui.define([
 			// start the app UI component
 			this.iStartMyUIComponent({
 				componentConfig: {
-					name: "sap.btp.project1",
+					name: "sap.btp.innovatorchallenge2021trainer",
 					async: true
 				},
 				hash: oOptions.hash,

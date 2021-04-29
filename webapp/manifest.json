@@ -1,7 +1,7 @@
 {
     "_version": "1.32.0",
     "sap.app": {
-        "id": "sap.btp.project1",
+        "id": "sap.btp.innovatorchallenge2021trainer",
         "type": "application",
         "i18n": "i18n/i18n.properties",
         "applicationVersion": {
@@ -41,7 +41,7 @@
     "sap.ui5": {
         "flexEnabled": false,
         "rootView": {
-            "viewName": "sap.btp.project1.view.View1",
+            "viewName": "sap.btp.innovatorchallenge2021trainer.view.View1",
             "type": "XML",
             "async": true,
             "id": "View1"
@@ -62,7 +62,7 @@
             "i18n": {
                 "type": "sap.ui.model.resource.ResourceModel",
                 "settings": {
-                    "bundleName": "sap.btp.project1.i18n.i18n"
+                    "bundleName": "sap.btp.innovatorchallenge2021trainer.i18n.i18n"
                 }
             },
             "": {
@@ -82,7 +82,7 @@
                 "routerClass": "sap.m.routing.Router",
                 "viewType": "XML",
                 "async": true,
-                "viewPath": "sap.btp.project1.view",
+                "viewPath": "sap.btp.innovatorchallenge2021trainer.view",
                 "controlAggregation": "pages",
                 "controlId": "app",
                 "clearControlAggregation": false
@@ -109,6 +109,6 @@
     },
     "sap.cloud": {
         "public": true,
-        "service": "sap-btp-project1"
+        "service": "sap-btp-innovatorchallenge2021trainer"
     }
 }

@@ -1,11 +1,11 @@
 sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"sap/ui/Device",
-	"sap/btp/project1/model/models"
+	"sap/btp/innovatorchallenge2021trainer/model/models"
 ], function (UIComponent, Device, models) {
 	"use strict";
 
-	return UIComponent.extend("sap.btp.project1.Component", {
+	return UIComponent.extend("sap.btp.innovatorchallenge2021trainer.Component", {
 
 		metadata: {
 			manifest: "json"

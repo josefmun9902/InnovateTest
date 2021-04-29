@@ -1,53 +1,53 @@
 _schema-version: "3.2"
-ID: sap-btp-project1
+ID: sap-btp-innovatorchallenge2021trainer
 description: Innovator Challenge 2021
 version: 0.0.1
 modules:
-- name: sap-btp-project1-dest-content
+- name: sap-btp-innovatorchallenge2021trainer-dest-content
   type: com.sap.application.content
   requires:
-  - name: sap-btp-project1-dest-srv
+  - name: sap-btp-innovatorchallenge2021trainer-dest-srv
     parameters:
       content-target: true
-  - name: sap-btp-project1-repo-host
+  - name: sap-btp-innovatorchallenge2021trainer-repo-host
     parameters:
       service-key:
-        name: sap-btp-project1-repo-host-key
-  - name: sap-btp-project1-uaa
+        name: sap-btp-innovatorchallenge2021trainer-repo-host-key
+  - name: sap-btp-innovatorchallenge2021trainer-uaa
     parameters:
       service-key:
-        name: sap-btp-project1-uaa-key
+        name: sap-btp-innovatorchallenge2021trainer-uaa-key
   parameters:
     content:
       instance:
         destinations:
-        - Name: sap-btp-project1_repo_host
-          ServiceInstanceName: sap-btp-project1-html5-srv
-          ServiceKeyName: sap-btp-project1-repo-host-key
-          sap.cloud.service: sap-btp-project1
+        - Name: sap-btp-innovatorchallenge2021trainer_repo_host
+          ServiceInstanceName: sap-btp-innovatorchallenge2021trainer-html5-srv
+          ServiceKeyName: sap-btp-innovatorchallenge2021trainer-repo-host-key
+          sap.cloud.service: sap-btp-innovatorchallenge2021trainer
         - Authentication: OAuth2UserTokenExchange
-          Name: sap-btp-project1_uaa
-          ServiceInstanceName: sap-btp-project1-xsuaa-srv
-          ServiceKeyName: sap-btp-project1-uaa-key
-          sap.cloud.service: sap-btp-project1
+          Name: sap-btp-innovatorchallenge2021trainer_uaa
+          ServiceInstanceName: sap-btp-innovatorchallenge2021trainer-xsuaa-srv
+          ServiceKeyName: sap-btp-innovatorchallenge2021trainer-uaa-key
+          sap.cloud.service: sap-btp-innovatorchallenge2021trainer
         existing_destinations_policy: ignore
   build-parameters:
     no-source: true
-- name: sap-btp-project1-app-content
+- name: sap-btp-innovatorchallenge2021trainer-app-content
   type: com.sap.application.content
   path: .
   requires:
-  - name: sap-btp-project1-repo-host
+  - name: sap-btp-innovatorchallenge2021trainer-repo-host
     parameters:
       content-target: true
   build-parameters:
     build-result: resources
     requires:
     - artifacts:
-      - sapbtpproject1.zip
-      name: sapbtpproject1
+      - sapbtpinnovatorchallenge2021trainer.zip
+      name: sapbtpinnovatorchallenge2021trainer
       target-path: resources/
-- name: sapbtpproject1
+- name: sapbtpinnovatorchallenge2021trainer
   type: html5
   path: .
   build-parameters:
@@ -58,7 +58,7 @@ modules:
     - npm run build:cf
     supported-platforms: []
 resources:
-- name: sap-btp-project1-dest-srv
+- name: sap-btp-innovatorchallenge2021trainer-dest-srv
   type: org.cloudfoundry.managed-service
   parameters:
     config:
@@ -74,20 +74,20 @@ resources:
           existing_destinations_policy: update
       version: 1.0.0
     service: destination
-    service-name: sap-btp-project1-dest-srv
+    service-name: sap-btp-innovatorchallenge2021trainer-dest-srv
     service-plan: lite
-- name: sap-btp-project1-uaa
+- name: sap-btp-innovatorchallenge2021trainer-uaa
   type: org.cloudfoundry.managed-service
   parameters:
     path: ./xs-security.json
     service: xsuaa
-    service-name: sap-btp-project1-xsuaa-srv
+    service-name: sap-btp-innovatorchallenge2021trainer-xsuaa-srv
     service-plan: application
-- name: sap-btp-project1-repo-host
+- name: sap-btp-innovatorchallenge2021trainer-repo-host
   type: org.cloudfoundry.managed-service
   parameters:
     service: html5-apps-repo
-    service-name: sap-btp-project1-html5-srv
+    service-name: sap-btp-innovatorchallenge2021trainer-html5-srv
     service-plan: app-host
 parameters:
   deploy_mode: html5-repo

@@ -7,7 +7,7 @@ sap.ui.define([
 	function (Controller) {
 		"use strict";
 
-		return Controller.extend("sap.btp.project1.controller.View1", {
+		return Controller.extend("sap.btp.innovatorchallenge2021trainer.controller.View1", {
 			onInit: function () {
 
 			}

@@ -1,5 +1,5 @@
 {
-  "xsappname": "sapbtpproject1",
+  "xsappname": "sapbtpinnovatorchallenge2021trainer",
   "tenant-mode": "dedicated",
   "description": "Security profile of called application",
   "scopes": [
