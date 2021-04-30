@@ -17,6 +17,7 @@ steps:
     includeCommitId: false
     versioningType: cloud
   executeBuild:
+    xMakeFree: true
     buildTool: mta
 
 ### Stage-specific configuration
