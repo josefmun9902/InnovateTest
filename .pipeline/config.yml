@@ -16,6 +16,8 @@ steps:
     buildTool: mta
     includeCommitId: false
     versioningType: cloud
+  executeBuild:
+    buildTool: mta
 
 ### Stage-specific configuration
 stages:
