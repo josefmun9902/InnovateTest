@@ -17,7 +17,9 @@ steps:
     includeCommitId: false
     versioningType: cloud
   executeBuild:
-    xMakeFree: true
+    xMakeJobName: 'inno-trainer-2021'
+    nextGenXMake: true
+    xMakeNovaCredentialsId: 'I534404-xMakeNova' 
     buildTool: mta
 
 ### Stage-specific configuration
