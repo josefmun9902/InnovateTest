@@ -7,7 +7,7 @@ general:
 
 ### Step-specific configuration
 steps:
-mtaBuild:
+  mtaBuild:
     buildTarget: 'CF'
   cloudFoundryDeploy:
     cloudFoundry:
