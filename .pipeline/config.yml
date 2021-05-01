@@ -29,7 +29,7 @@ stages:
   #'Init':
     #artifactPrepareVersion: false
   'Central Build':
-    buildExecute : true
+    mtaBuild : true
   'Confirm':
     manualConfirmation: false
   'Release':
