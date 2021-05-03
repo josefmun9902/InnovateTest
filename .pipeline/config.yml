@@ -31,6 +31,6 @@ stages:
   'Central Build':
     mtaBuild : true
   'Confirm':
-    manualConfirmation: false
+    manualConfirmation: true
   'Release':
     cloudFoundryDeploy: true
