@@ -19,9 +19,9 @@ steps:
     includeCommitId: false
     versioningType: cloud
   executeBuild:
-    xMakeJobName: 'I534404-innovator-challenge-2021-demoapp-SP-MS-common'
-    nextGenXMake: true
-    xMakeNovaCredentialsId: 'I534404-xMakeNova' 
+#     xMakeJobName: 'I534404-innovator-challenge-2021-demoapp-SP-MS-common'
+#     nextGenXMake: true
+#     xMakeNovaCredentialsId: 'I534404-xMakeNova' 
     buildTool: mta
 
 ### Stage-specific configuration
