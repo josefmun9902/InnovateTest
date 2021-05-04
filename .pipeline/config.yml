@@ -28,7 +28,7 @@ steps:
 stages:
   #'Init':
     #artifactPrepareVersion: false
-  'Central Build':
+  'Build':
     mtaBuild : true
   'Confirm':
     manualConfirmation: true
