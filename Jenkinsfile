@@ -1,3 +1,7 @@
-@Library('piper-lib') _
-
-sapPiperPipeline script: this
+@Library('piper-lib-os') _
+node() {
+    stage('build')
+    {
+        mtaBuild script: this
+    }
+}
